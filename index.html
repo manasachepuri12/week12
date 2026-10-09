@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexa | Creative Digital</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080b18;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 8%;
+      border-bottom: 1px solid #ffffff12;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #a78bfa;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 28px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a78bfa;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: #7c3aed;
+      filter: blur(150px);
+      opacity: 0.35;
+      z-index: -1;
+      top: 20%;
+      left: calc(50% - 175px);
+    }
+
+    .tag {
+      padding: 10px 18px;
+      border: 1px solid #a78bfa66;
+      background: #8b5cf61a;
+      border-radius: 50px;
+      color: #c4b5fd;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.1;
+      max-width: 900px;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #a78bfa, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .description {
+      max-width: 600px;
+      color: #94a3b8;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 25px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: linear-gradient(90deg, #8b5cf6, #6366f1);
+      color: white;
+      box-shadow: 0 8px 30px #7c3aed44;
+    }
+
+    .secondary {
+      border: 1px solid #ffffff25;
+      color: white;
+      background: #ffffff08;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      filter: brightness(1.15);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      padding: 20px 8% 80px;
+    }
+
+    .card {
+      padding: 30px;
+      background: linear-gradient(145deg, #151a30, #0d1121);
+      border: 1px solid #ffffff12;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #8b5cf6;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #64748b;
+      border-top: 1px solid #ffffff12;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+        font-size: 13px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        padding: 10px 6% 55px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">NE<span>XA.</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="tag">✦ THE FUTURE STARTS HERE</div>
+
+      <h1>
+        Build Something<br>
+        <span>Amazing.</span>
+      </h1>
+
+      <p class="description">
+        Turn your boldest ideas into reality.
+        Create beautiful digital experiences with
+        creativity, innovation, and a little magic.
+      </p>
+
+      <div class="buttons">
+        <a href="#features" class="btn primary">
+          Explore More ↗
+        </a>
+        <a href="#about" class="btn secondary">
+          Learn About Us
+        </a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <article class="card">
+        <div class="icon">🎨</div>
+        <h2>Beautiful Design</h2>
+        <p>
+          Clean layouts, modern colors, and stunning
+          visuals that make every detail stand out.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">⚡</div>
+        <h2>Fast Performance</h2>
+        <p>
+          Lightweight code and smooth interactions
+          for a quick and enjoyable experience.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">📱</div>
+        <h2>Fully Responsive</h2>
+        <p>
+          A flexible layout that adapts beautifully
+          to mobile phones, tablets, and desktops.
+        </p>
+      </article>
+    </section>
+
+    <section class="hero" id="about" style="min-height: 45vh">
+      <h1>Ideas into <span>Reality.</span></h1>
+      <p class="description">
+        Your next great project starts with a single step.
+        Let's make something extraordinary.
+      </p>
+      <a href="mailto:hello@example.com" class="btn primary">
+        Get In Touch ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Nexa Studio. Made with ♥ and creativity.
+  </footer>
+
+</body>
+</html>
